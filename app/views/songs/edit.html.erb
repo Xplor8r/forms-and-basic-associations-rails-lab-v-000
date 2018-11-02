@@ -3,6 +3,7 @@
 <%= form_for @song  do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title %>
+  <%= f.label :genre %>
   <%= f.collection_select :genre_id, Genre.all, :id, :name%>
 
   <input name="song[note_contents][]" id="song_notes_1">
