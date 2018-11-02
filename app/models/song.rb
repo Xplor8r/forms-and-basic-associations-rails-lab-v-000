@@ -29,7 +29,7 @@ class Song < ActiveRecord::Base
 end
 
 def note_ids
-  self.notes.map { |n| n.content }
+  self.notes.map { |n| n.id }
 end
 
 end
