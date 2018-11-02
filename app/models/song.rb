@@ -19,17 +19,6 @@ class Song < ActiveRecord::Base
     self.artist ? self.artist.name : nil
   end
 
-  def note_ids=(ids)
-    ids.each do |id|
-      if id
-        self.notes.build(content: content)
-      end
-    end
-  end
-end
 
-def note_ids
-  self.notes.map { |n| n.id }
-end
 
 end
